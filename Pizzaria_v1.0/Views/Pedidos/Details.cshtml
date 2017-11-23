@@ -1,0 +1,50 @@
+﻿@model Pizzaria_v1._0.Models.Pedido
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pedido</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria.CategoriaNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria.CategoriaNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa.Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empresa.Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sabor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sabor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PedidoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

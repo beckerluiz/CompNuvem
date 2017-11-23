@@ -1,0 +1,39 @@
+﻿@model Pizzaria_v1._0.Models.Categoria
+
+@{
+    ViewBag.Title = "Deletar Categoria";
+}
+
+<h2>Deletar Categoria</h2>
+
+<div>
+    <h4>Categoria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoriaNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoriaNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoriaDescricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoriaDescricao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Deletar" class="btn btn-default" /> |
+            @Html.ActionLink("Retornar", "Index")
+        </div>
+    }
+</div>
