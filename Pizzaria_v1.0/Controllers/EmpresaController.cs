@@ -190,6 +190,7 @@ namespace Pizzaria_v1._0.Controllers
 
         public ActionResult Logout()
         {
+            Session.Remove("sessionEmpresaId");
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
         }
